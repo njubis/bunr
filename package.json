@@ -1,0 +1,55 @@
+{
+  "name": "bunr",
+  "description": "Extended bun package manager with conventional commits, semantic versioning, and changelog generation",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "private": false,
+  "type": "module",
+  "bin": {
+    "bunr": "./dist/cli.js"
+  },
+  "keywords": [
+    "bun",
+    "bunr",
+    "package-manager",
+    "monorepo",
+    "conventional-commits",
+    "semantic-versioning",
+    "changelog"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/njubis/bunr.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "bun build src/cli.ts --outdir dist --target node --format esm",
+    "dev": "bun run src/cli.ts",
+    "prepublishOnly": "bun run build"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/conventional-commits-parser": "^5.0.1",
+    "@types/inquirer": "^9.0.8",
+    "@types/yargs": "^17.0.33"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.29.5",
+    "@types/inquirer-autocomplete-prompt": "^3.0.3",
+    "chalk": "^5.5.0",
+    "conventional-commits-parser": "^6.2.0",
+    "fuse.js": "^7.1.0",
+    "glob": "^11.0.3",
+    "inquirer": "^12.9.0",
+    "inquirer-autocomplete-prompt": "^3.0.1",
+    "inquirer-autocomplete-standalone": "^0.8.1",
+    "inquirer-maxlength-input-prompt": "^1.0.2",
+    "yargs": "^18.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
