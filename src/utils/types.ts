@@ -318,34 +318,32 @@ export type PreReleaseMode = "beta" | "alpha" | string;
  * - publishing
  */
 export interface BunrConfig {
-  commits: {
-    /** Whether to allow emojis in coventional commits.
-     * @default true
-     */
-    allowEmoji: boolean;
-    /** Whether to allow emojis in coventional commits.
-     * @default
-     * `false` // if single package repo
-     * `true`  // in monorepo setup;
-     */
-    enforceScope: boolean;
-    /** List of scopes for conventional commits.
-     * @default
-     * [] // empty array if single package repo
-     * `<workspace-packages>`  // in monorepo setup, the available workspace packages;
-     */
-    scopes: string[];
-    /** List of conventional commits types.
-     *
-     */
-    types: CommitType[];
-  };
+  /** Whether to allow emojis in coventional commits.
+   * @default true
+   */
+  allowEmoji: boolean;
+  /** Whether to allow emojis in coventional commits.
+   * @default
+   * `false` // if single package repo
+   * `true`  // in monorepo setup;
+   */
+  enforceScope: boolean;
+  /** List of scopes for conventional commits.
+   * @default
+   * [] // empty array if single package repo
+   * `<workspace-packages>`  // in monorepo setup, the available workspace packages;
+   */
+  scopes: string[];
+  /** List of conventional commits types.
+   *
+   */
+  types: CommitType[];
   /** Whether to use conventional commits for changelogs.
    *
    * If `false`, bunr will prompt you for a summary of changes to write to `CHANGELOG.md`
    * @default true
    */
-  conventionalChangets: boolean;
+  conventionalChangesets: boolean;
   /** A list of possible prelease modes.
    *
    * These however can be overidden by choosing `other` option and providing custom one when  when `bun publish`ing

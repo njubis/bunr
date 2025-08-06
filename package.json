@@ -38,15 +38,14 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.29.5",
-    "@types/inquirer-autocomplete-prompt": "^3.0.3",
+    "@inquirer/prompts": "^7.8.0",
     "chalk": "^5.5.0",
     "conventional-commits-parser": "^6.2.0",
     "fuse.js": "^7.1.0",
     "glob": "^11.0.3",
     "inquirer": "^12.9.0",
-    "inquirer-autocomplete-prompt": "^3.0.1",
     "inquirer-autocomplete-standalone": "^0.8.1",
-    "inquirer-maxlength-input-prompt": "^1.0.2",
+    "ts-deepmerge": "^7.0.3",
     "yargs": "^18.0.0"
   },
   "peerDependencies": {
